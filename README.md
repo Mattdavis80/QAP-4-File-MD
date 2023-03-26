@@ -13,10 +13,10 @@ Within this repository you will find the following files:
 
 Additional learning used to complete this QAP
 
-- One Stop Insurance Company Python File
-      - Regular Expressions usings Pythons "re" library --- This library was used to validate the user's postal code. It was only included in this section as an                   opportunity to learn how to implement the feature.
+One Stop Insurance Company Python File
+- Regular Expressions usings Pythons "re" library --- This library was used to validate the user's postal code. It was only included in this section as an                opportunity to learn how to implement the feature.
 
-- Sales Graph Python File:
-      - MathPlotLib Patches module --- This was used to create a custom legend to properly display information.
+Sales Graph Python File:
+- MathPlotLib Patches module --- This was used to create a custom legend to properly display information.
 
 
