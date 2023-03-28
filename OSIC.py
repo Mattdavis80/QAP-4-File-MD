@@ -84,7 +84,7 @@ while True:
     pattern = r"^[A-Z]\d[A-Z][ -]?\d[A-Z]\d$"
 
     while True:
-        post_code = input("Postal Code: (e.g. A1A 1A1):   ").upper()
+        post_code = input("Postal Code: (A1A 1A1):   ").upper()
         if re.match(pattern, post_code):
             break
         else:
