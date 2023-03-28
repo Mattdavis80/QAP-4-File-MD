@@ -1,6 +1,6 @@
 # QAP 4 - One Stop Insurance Company - Python Program
 # Author: Matthew Davis
-# Last Updated: March 16, 2023
+# Last Updated: March 20, 2023
 
 # Import Statements
 import datetime
@@ -30,19 +30,23 @@ while True:
 # While true to allow users to make as many entries as they need, option to break from statement at end of each receipt 
 
 # User Validated Inputs
-# First name, mandatory input, converted to Title-case
+# First name, mandatory input, alpha only, converted to Title-case
     while True:
         f_name = input("First Name:                    ").title()
         if f_name == "":
             print("First name cannot be empty, Please re-enter")
+        elif not f_name.isalpha():
+            print("Please enter a valid name")
         else:
             break
 
-# Last name, mandatory input, converted to Title-case
+# Last name, mandatory input, alpha only, converted to Title-case
     while True:
         l_name = input("Last Name:                     ").title()
         if l_name == "":
             print("Last name cannot be empty, Please re-enter")
+        elif not l_name.isalpha():
+            print("Please enter a valid name")
         else:
             break
 
@@ -304,7 +308,7 @@ while True:
     while True:
         continue_script = input("Would you like to start another Invoice (Y/N):  ").upper()
         if continue_script == "Y":
-            continue
+            break
         elif continue_script == "N":
             exit()
         else:
