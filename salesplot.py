@@ -1,6 +1,6 @@
 # Yearly Sales Graph Generator - QAP4
 # Author: Matthew Davis - Keyin College Software Development Student
-# Last Updated: March 19, 2023
+# Last Updated: March 20, 2023
 
 # Import Statements
 import calendar
@@ -34,6 +34,7 @@ for i in range(1, 13):
         while True:
             try:
                 sales_amt = float(input("Enter the total sales for {}: ".format(calendar.month_name[i])))
+                sales_amt = round(sales_amt,2)
             except:
                 print("Please enter a valid number")
             else:
@@ -56,6 +57,8 @@ col = []
 for val in y_axis:
     if val > avg_sales:
         col.append("green")
+    elif val == avg_sales:
+        col.append("orange")
     else:
         col.append("red")
 
@@ -77,13 +80,17 @@ avg = mpatches.Patch(color='Orange', label='Average Sales')
 bar_graph = plt.bar(x_axis, y_axis, color=col)
 plt.xlabel("Month")
 plt.ylabel("Sales in $")
-plt.title("Sales from {} to {}".format(calendar.month_name[1], calendar.month_name[curr_month]))
+if curr_month == 1:
+    plt.title(f"January Sales")
+else:
+    plt.title("Sales from {} to {}".format(calendar.month_name[1], calendar.month_name[curr_month]))
 plt.bar_label(bar_graph, labels=labels, label_type="center")
 plt.axhline(avg_sales, color="orange")
 plt.legend(handles=[avg, above_avg, below_avg], loc="best")
 
 # Show the graph
 plt.show()
+
 
 
 
